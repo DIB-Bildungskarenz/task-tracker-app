@@ -1,0 +1,29 @@
+<!-- <h2>Neue Aufgabe hinzufügen</h2>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label for="title">Titel:</label>
+    <input type="text" [(ngModel)]="task.title" name="title" required>
+  </div>
+  <div>
+    <label for="description">Beschreibung:</label>
+    <textarea [(ngModel)]="task.description" name="description"></textarea>
+  </div>
+  <button type="submit">Aufgabe hinzufügen</button>
+</form>
+<a routerLink="/">Zurück zur Aufgabenliste</a> -->
+
+<!-- ohne ngModel -->
+<h2>Neue Aufgabe hinzufügen</h2>
+<form (ngSubmit)="onSubmit(title.value, description.value)">
+  <div>
+    <label for="title">Titel:</label>
+    <input type="text" #title required>
+  </div>
+  <div>
+    <label for="description">Beschreibung:</label>
+    <textarea #description></textarea>
+  </div>
+  <button type="submit">Aufgabe hinzufügen</button>
+</form>
+<a routerLink="/">Zurück zur Aufgabenliste</a>
+
