@@ -1,0 +1,12 @@
+.completed {
+    text-decoration: line-through;
+    color: #ffb6c1; 
+  }
+  
+  li {
+    background-color: #98ff98; 
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+  }
+  

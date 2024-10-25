@@ -4,6 +4,7 @@ export interface Task {
   id: number;
   title: string;
   description: string;
+  completed: boolean;
 }
 
 @Injectable({
@@ -20,5 +21,12 @@ export class TaskService {
 
   addTask(task: Task) {
     this.tasks.push(task);  // Aufgabe zur Liste hinzufügen
+  }
+
+  toggleTaskCompletion(taskId: number) {
+    const task = this.tasks.find(t => t.id === taskId);
+    if (task) {
+      task.completed = !task.completed; // Status der Aufgabe umschalten
+    }
   }
 }

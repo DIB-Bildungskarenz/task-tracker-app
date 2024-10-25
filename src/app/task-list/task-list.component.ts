@@ -14,4 +14,11 @@ export class TaskListComponent implements OnInit {
   ngOnInit(): void {
     this.tasks = this.taskService.getTasks();  // Aufgaben aus dem Service holen
   }
+
+
+  // Methode zum Umschalten des Status "erledigt" einer Aufgabe
+  toggleCompleted(task: Task) {
+    task.completed = !task.completed;  // Setze den Status auf das Gegenteil
+    // Falls gewünscht, könnte man hier den Service anpassen, um den Status persistent zu speichern
+  }
 }
