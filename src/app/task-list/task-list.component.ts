@@ -7,12 +7,12 @@ import { TaskService, Task } from '../task.service';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  tasks: Task[] = [];
+  tasks: Task[] = []; //array zum speichern der toDos
 
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
-    this.tasks = this.taskService.getTasks();  // Aufgaben aus dem Service holen
+    this.tasks = this.taskService.getTasks();  //Holt ToDos und speichert in array
   }
 
 

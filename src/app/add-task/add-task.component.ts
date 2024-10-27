@@ -12,8 +12,8 @@ export class AddTaskComponent {
   // Initialisiere die neue Aufgabe mit einem `completed`-Attribut
   task: Task = { id: 0, title: '', description: '', completed: false };
 
-  constructor(private taskService: TaskService, private router: Router) {}
-
+  constructor(private taskService: TaskService, private router: Router) {} //consturctor
+    //hinzüfugen von toDos
   onSubmit(title: string, description: string) {
     this.task.id = Math.random();
     this.task.title = title;
