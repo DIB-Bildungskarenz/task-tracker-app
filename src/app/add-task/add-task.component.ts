@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { TaskService, Task } from '../task.service';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-add-task',
   templateUrl: './add-task.component.html',
-  styleUrls: ['./add-task.component.css']
+  styleUrls: ['./add-task.component.css'],
+  standalone: true,  
+  imports: [CommonModule, FormsModule]
 })
 
 export class AddTaskComponent {

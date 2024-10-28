@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService, Task } from '../task.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.css']
+  styleUrls: ['./task-list.component.css'] ,
+  standalone: true,  
+  imports: [CommonModule]
 })
 export class TaskListComponent implements OnInit {
   tasks: Task[] = []; //array zum speichern der toDos

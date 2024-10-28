@@ -1,22 +1,16 @@
-<!-- <h2>Neue Aufgabe hinzufügen</h2>
-<form (ngSubmit)="onSubmit()">
-  <div>
-    <label for="title">Titel:</label>
+<h2>Neue Aufgabe hinzufügen</h2>
+<form (ngSubmit)="onSubmit(task.title, task.description)">
     <input type="text" [(ngModel)]="task.title" name="title" required>
-  </div>
-  <div>
-    <label for="description">Beschreibung:</label>
     <textarea [(ngModel)]="task.description" name="description"></textarea>
-  </div>
-  <button type="submit">Aufgabe hinzufügen</button>
-</form>
-<a routerLink="/">Zurück zur Aufgabenliste</a> -->
+    <button type="submit">Aufgabe hinzufügen</button>
+  </form>
+  
+<a routerLink="/">Zurück zur Aufgabenliste</a>
+
 
 <!-- ohne ngModel -->
- 
-<h2>Neue Aufgabe hinzufügen</h2>
-
-<!-- Angenommen, es sind nur zwei Argumente erforderlich -->
+<!-- <h2>Neue Aufgabe hinzufügen</h2>
+Angenommen, es sind nur zwei Argumente erforderlich
 <form (ngSubmit)="onSubmit(title.value, description.value)">
     <div>
       <label for="title">Titel:</label>
@@ -28,5 +22,5 @@
     </div>
     <button type="submit">Aufgabe hinzufügen</button>
   </form>
-  <a routerLink="/">Zurück zur Aufgabenliste</a>
+  <a routerLink="/">Zurück zur Aufgabenliste</a> -->
   
