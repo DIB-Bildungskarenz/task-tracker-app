@@ -18,12 +18,11 @@ export class AddTaskComponent {
 
   constructor(private taskService: TaskService, private router: Router) {} //consturctor
     //hinzüfugen von toDos
-  onSubmit(title: string, description: string) {
+  onSubmit() {
     this.task.id = Math.random();
-    this.task.title = title;
-    this.task.description = description;
     this.taskService.addTask(this.task);
     this.router.navigate(['/']);
+    this.router.navigate(['/task-list']); // Wenn du eine solche Route definiert hast
   }
   
 }

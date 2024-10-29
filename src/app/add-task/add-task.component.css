@@ -1,0 +1,24 @@
+
+form {
+    background-color: #fff; /* Weißer Hintergrund für das Formular */
+    padding: 20px;
+    border: 1px solid #ff69b4; /* Rosa Rand */
+    border-radius: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0; /* Abstand zwischen den Eingabefeldern */
+    border: 1px solid #98ff98; /* Mintgrüner Rand */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff69b4; /* Rosa */
+    color: #fff; /* Weißer Text */
+}
+
+button:hover {
+    background-color: #e05e8b; /* Dunkleres Rosa bei Hover */
+}

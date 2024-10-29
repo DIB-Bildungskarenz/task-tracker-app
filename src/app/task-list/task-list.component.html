@@ -1,10 +1,12 @@
-<h2>Task List</h2>
+
+  <h2>Aufgabenliste</h2>
 <ul>
-    <li *ngFor = "let task of tasks"> <!-- Wiederholungselement, das für jede Aufgabe in der Liste eine Zeile erstellt -->
-      <h3>{{ task.title }}</h3>
-      <p>{{ task.description }}</p>
-      <input type="checkbox" [checked]="task.completed" (change)="toggleCompleted(task)" /> <!-- checkbox ob erledigt-->
-    </li>
-  </ul>
-  <a routerLink="/add-task">Neue Aufgabe hinzufügen</a>
-  
+  <li *ngFor="let task of tasks">
+    <h3>{{ task.title }}</h3>
+    <p>{{ task.description }}</p>
+    <button (click)="toggleCompleted(task)">
+      {{ task.completed ? 'Markiere als unerledigt' : 'Markiere als erledigt' }}
+    </button>
+  </li>
+</ul>
+<a routerLink="/add-task">Neue Aufgabe hinzufügen</a>
