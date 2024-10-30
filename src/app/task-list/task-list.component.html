@@ -1,12 +1,12 @@
-
-  <h2>Aufgabenliste</h2>
+<h2>Aufgabenliste</h2>
 <ul>
-  <li *ngFor="let task of tasks">
+  <li *ngFor="let task of tasks" [ngStyle]="{'background-color': task.completed ? 'lightgreen' : 'lightpink'}">
     <h3>{{ task.title }}</h3>
     <p>{{ task.description }}</p>
     <button (click)="toggleCompleted(task)">
       {{ task.completed ? 'Markiere als unerledigt' : 'Markiere als erledigt' }}
     </button>
+    <button class="delete-button" (click)="deleteTask(task)">Löschen</button> <!-- Löschen-Button -->
   </li>
 </ul>
 <a routerLink="/add-task">Neue Aufgabe hinzufügen</a>

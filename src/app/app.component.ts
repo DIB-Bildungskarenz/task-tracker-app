@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+import { AddTaskComponent } from './add-task/add-task.component'; // importiere hier, wenn nötig
+import { TaskListComponent } from './task-list/task-list.component'; // importiere hier, wenn nötig
+
+
 @Component({
-  selector: 'app-root', //def. html sektor
-  standalone: true, //komponente ist eigenständig,müssen keine module impo. werden
-  imports: [RouterOutlet], //listet module
-  templateUrl: './app.component.html', //html
-  styleUrl: './app.component.css' //css
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, AddTaskComponent, TaskListComponent], // Importiere RouterOutlet für die Navigation
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'] // Korrigiere hier 'styleUrl' zu 'styleUrls'
 })
 export class AppComponent {
-  title = 'task-tracker-app'; //init. name der anwendung
+  title = 'Task-tracker-app'; // Initialisiere den Namen der Anwendung
 }

@@ -13,7 +13,29 @@ li {
   transition: background-color 0.3s;
 }
 
-li.completed {
-  text-decoration: line-through; /* Durchgestrichen für erledigte Aufgaben */
-  background-color: #d3ffd3; /* Helles Grün für erledigte Aufgaben */
+
+
+.not-completed {
+    background-color: #ffcccb; /* Hellrosa für unerledigte Aufgaben */
 }
+
+.completed {
+    background-color: #98ff98; /* Mintgrün für erledigte Aufgaben */
+}
+
+button {
+  margin-right: 10px; /* Abstand zwischen den Buttons */
+}
+
+.delete-button {
+  background-color: lightcoral; /* Hellorange für den Löschen-Button */
+  color: white; /* Textfarbe weiß */
+  border: none; /* Keine Standardrahmen */
+  padding: 5px 10px; /* Innenabstand für bessere Bedienbarkeit */
+  cursor: pointer; /* Zeigt an, dass der Button klickbar ist */
+}
+
+.delete-button:hover {
+  background-color: darkorange; /* Dunkelorange bei Hover */
+}
+

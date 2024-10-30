@@ -19,11 +19,13 @@ export class AddTaskComponent {
   constructor(private taskService: TaskService, private router: Router) {} //consturctor
     //hinzüfugen von toDos
   onSubmit() {
-    this.task.id = Math.random();
-    this.taskService.addTask(this.task);
-    this.router.navigate(['/']);
-    this.router.navigate(['/task-list']); // Wenn du eine solche Route definiert hast
+    this.taskService.addTask(this.task); // Füge die Aufgabe hinzu
+    this.router.navigate(['/']); // Navigiere zur Aufgabenliste
+    this.resetTask();
   }
-  
+  private resetTask() {
+    this.task = { id: 0, title: '', description: '', completed: false }; // Leeres Aufgabenobjekt
+  }
 }
+
 

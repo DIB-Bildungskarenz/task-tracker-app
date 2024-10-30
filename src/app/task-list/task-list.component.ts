@@ -24,4 +24,12 @@ export class TaskListComponent implements OnInit {
     task.completed = !task.completed;  // Setze den Status auf das Gegenteil
     // Falls gewünscht, könnte man hier den Service anpassen, um den Status persistent zu speichern
   }
+  // Methode zum Löschen einer Aufgabe
+  deleteTask(task: Task) {
+    const confirmed = confirm('Wirklich löschen?'); // Bestätigungsdialog
+    if (confirmed) {
+      this.taskService.deleteTask(task); // Aufgabe im Service löschen
+      this.tasks = this.tasks.filter(t => t.id !== task.id); // Entferne die Aufgabe aus der Liste
+    }
+  }
 }
