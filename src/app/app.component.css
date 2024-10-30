@@ -1,0 +1,59 @@
+.calculator-container {
+    width: 300px; /* Breite des Containers */
+    background-color: #d0fadc; /* Hintergrundfarbe */
+    border-radius: 15px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Schatten für 3D-Effekt */
+    padding: 20px; /* Innenabstand */
+    margin: 20px auto; /* Zentrieren auf der Seite */
+    text-align: center; /* Text zentrieren */
+  }
+  
+  h2 {
+    font-size: 1.5em; /* Größe des Haupttitels */
+    margin-bottom: 15px; /* Abstand nach unten */
+  }
+  
+  ul {
+    list-style: none; /* Keine Aufzählungszeichen */
+    padding: 0; /* Kein Innenabstand */
+  }
+  
+  li {
+    background-color: #ffffff; /* Hintergrundfarbe für Aufgaben */
+    border-radius: 10px; /* Abgerundete Ecken für Aufgaben */
+    padding: 10px; /* Innenabstand */
+    margin: 10px 0; /* Abstand zwischen den Aufgaben */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+  }
+  
+  button {
+    margin-top: 10px; /* Abstand über dem Button */
+    padding: 5px 10px; /* Innenabstand im Button */
+    border: none; /* Kein Rand */
+    border-radius: 5px; /* Abgerundete Ecken */
+    background-color: #4CAF50; /* Grüner Hintergrund */
+    color: white; /* Weiße Schrift */
+    cursor: pointer; /* Zeigt den Cursor als Hand */
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Dunklerer Grünton beim Hover */
+  }
+  
+  a {
+    display: block; /* Blockelement für den Link */
+    margin-top: 15px; /* Abstand oben */
+    color: #007bff; /* Linkfarbe */
+    text-decoration: none; /* Keine Unterstreichung */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Unterstreichen beim Hover */
+  }
+
+  @media (max-width: 600px) {
+    .calculator-container {
+      width: 90%; /* Container Breite auf 90% bei kleinen Bildschirmen */
+    }
+  }
+  
